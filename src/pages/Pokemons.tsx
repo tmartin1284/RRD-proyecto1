@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { type Pokemon } from "../types/interfaces";
 import { getPokemons } from "../services/accesoPokeapi";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import type { estadoCarga } from "../types/interfaces";
+import PokemonList from "../components/PokemonList";
 
 export default function Pokemons() {
   //tenemos dos estados: uno es la lista de pokemons y otro es el estado de carga
@@ -51,14 +52,17 @@ export default function Pokemons() {
     return (
       <>
         <div style={{ background: "Plum" }}>
-          <h1>listado de pokemons</h1>
+          {
+            /* <h1>listado de pokemons</h1>
           <ul>
             {pokemonsList?.map((pokemon) => (
               <li key={pokemon.name}>
                 <Link to={`/pokemons/${pokemon.name}`}>{pokemon.name} </Link>
               </li>
             ))}
-          </ul>
+          </ul> */
+            <PokemonList pokemonsList={pokemonsList} />
+          }
         </div>
       </>
     );
