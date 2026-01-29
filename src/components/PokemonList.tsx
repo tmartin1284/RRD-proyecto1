@@ -7,9 +7,8 @@ export default function PokemonList({
   pokemonsList: Pokemon[];
 }) {
   return (
-    <div>
-      Lista de Pokemons
-      <h1>listado de pokemons</h1>
+    <div style={{ background: "LightPink" }}>
+      <h2> Lista de Pokemons pokemonList </h2>
       <ul>
         {pokemonsList?.map((pokemon) => (
           //    <li key={pokemon.name}>

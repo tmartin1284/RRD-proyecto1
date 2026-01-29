@@ -52,15 +52,14 @@ export default function Pokemons() {
     return (
       <>
         <div style={{ background: "Plum" }}>
+          <h1>listado de pokemons</h1> pokemons
           {
-            /* <h1>listado de pokemons</h1>
-          <ul>
-            {pokemonsList?.map((pokemon) => (
-              <li key={pokemon.name}>
-                <Link to={`/pokemons/${pokemon.name}`}>{pokemon.name} </Link>
-              </li>
-            ))}
-          </ul> */
+            //   {pokemonsList?.map((pokemon) => (
+            //     <li key={pokemon.name}>
+            //       <Link to={`/pokemons/${pokemon.name}`}>{pokemon.name} </Link>
+            //     </li>
+            //   ))}
+            // </ul> */
             <PokemonList pokemonsList={pokemonsList} />
           }
         </div>
