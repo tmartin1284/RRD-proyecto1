@@ -11,6 +11,7 @@ import { Outlet } from "react-router-dom";
 import Navegacion2 from "./components/Navegacion2";
 import "./App.css";
 import PokeError from "./pages/PokeError";
+import Vacio from "./components/vacio";
 
 export default function App() {
   return (
@@ -18,17 +19,19 @@ export default function App() {
       <BrowserRouter>
         <Navegacion2 />
         <Routes>
+          <Route path="*" element={<Error />}></Route>
           <Route index element={<Inicio />} />
           <Route path="/sobre" element={<Sobre />}>
-            <Route path="tomas" element={<Tomas />} />
-            <Route path="txupito" element={<Txupito />} />
+            <Route path="Tomas" element={<Tomas />} />
+            <Route path="Txupito" element={<Txupito />} />
           </Route>
-          <Route path="/pokemons" element={<Outlet />}>
-            <Route index element={<Pokemons />} />
-            <Route path=":pokemonId" element={<DetallePokemon />} />
+          <Route element={<Vacio />}>
+            <Route path="/pokemons" element={<Outlet />}>
+              <Route path="lista" element={<Pokemons />} />
+              <Route path=":pokemonId?" element={<DetallePokemon />} />
+            </Route>
           </Route>
           <Route path="/pokeerror/:error" element={<PokeError />} />
-          <Route path="*" element={<Error />}></Route>
         </Routes>
         <Navegacion />
       </BrowserRouter>

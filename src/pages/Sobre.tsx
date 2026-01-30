@@ -13,10 +13,10 @@ export default function Sobre() {
           y ya de paso, en este componente vamos a ver como se renderizan
           llamadas anidadas de paginas
         </p>
+        <Outlet />
         <Link to="/"> Clik aqui para ir al inicio de la aplicación </Link>
         El outlet que hay abajo, es el lugar donde se renderizan las rutas
         anidadas
-        <Outlet />
       </div>
     </>
   );

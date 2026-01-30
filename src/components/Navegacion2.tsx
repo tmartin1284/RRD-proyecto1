@@ -23,15 +23,7 @@ export default function Navegacion2() {
           >
             Sobre
           </NavLink>
-          <NavLink
-            to="/sobre/txupito"
-            className={({ isActive }: NavLinkRenderProps) =>
-              isActive ? "active" : ""
-            }
-          >
-            {" "}
-            Inspirador
-          </NavLink>
+
           <NavLink
             to="/sobre/tomas"
             className={({ isActive }: NavLinkRenderProps) =>
@@ -39,7 +31,16 @@ export default function Navegacion2() {
             }
           >
             {" "}
-            Creador
+            Tomas
+          </NavLink>
+          <NavLink
+            to="/sobre/txupito"
+            className={({ isActive }: NavLinkRenderProps) =>
+              isActive ? "active" : ""
+            }
+          >
+            {" "}
+            Txupito
           </NavLink>
           <NavLink
             to="/pokemons"

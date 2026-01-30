@@ -22,7 +22,6 @@ export default function Pokemons() {
         const data = await getPokemons();
         if (isMounted && data) setPokemonsList(data);
         setEstado("completo");
-        console.log("Pokemons cargados");
       } catch (err) {
         if (isMounted) setEstado("Fallo al cargar Pokemons." + err);
       } finally {
